@@ -1,0 +1,112 @@
+Start Here:
+----------
+https://realpython.com/get-started-with-django-1/
+
+
+import sys
+print(sys.path)
+
+E:\GSReddy\Projects\django\OctaEdX>virtualenv --python="C:\Python\Python310\python.exe" pynewenv
+
+E:\GSReddy\Projects\django\OctaEdX>pynewenv\Scripts\activate.bat
+
+
+Next:
+-----
+https://realpython.com/django-user-management/
+https://www.javatpoint.com/django-crud-application **** 
+https://www.techiediaries.com/django/django-3-tutorial-and-crud-example-with-mysql-and-bootstrap/ *****
+https://adiramadhan17.medium.com/django-crud-with-forms-and-bootstrap-template-73af33d8f016
+https://realpython.com/python-sqlite-sqlalchemy/ **
+https://realpython.com/location-based-app-with-geodjango-tutorial/ ***
+https://www.jetbrains.com/help/pycharm/creating-and-running-your-first-django-project.html ***************
+https://iq.opengenus.org/crud-application-with-django/
+https://learndjango.com/tutorials/django-search-tutorial ***
+
+https://www.geeksforgeeks.org/django-crud-create-retrieve-update-delete-function-based-views/
+https://data-flair.training/blogs/django-crud-example/
+https://studygyaan.com/django/django-crud-create-retrieve-update-delete-function-based-views
+https://towardsdatascience.com/build-a-django-crud-app-by-using-class-based-views-12bc69d36ab6
+https://medium.com/@alex.kirkup/making-error-messages-visible-in-django-forms-1abea48c802a
+https://www.sankalpjonna.com/learn-django/building-a-django-crud-application-in-minutes
+https://efficientcoder.net/django-3-tutorial-and-crud-example-with-mysql-and-bootstrap/
+https://github.com/piinalpin/django-crud-sqlite **** 
+https://labpys.com/how-to-execute-the-crud-operation-in-django/
+https://www.javatpoint.com/django-crud-example **** 
+https://betterprogramming.pub/how-to-build-a-todo-application-with-django-ac675811d77b
+https://medium.com/@DashboardsHub/django-soft-ui-system-free-product-7c0c4b270a10
+
+https://www.learnvern.com/python-flask-tutorial/create-operation-using-sqlite-crud
+https://subscription.packtpub.com/book/web-development/9781839212505/2/ch02lvl1sec12/django-s-database-crud-operations
+https://subscription.packtpub.com/book/web-development/9781839212505/2/ch02lvl1sec09/sql-crud-operations
+https://ordinarycoders.com/blog/article/django-react-crud-application
+https://codesource.io/crud-application-using-django-and-javascript/
+https://www.section.io/engineering-education/django-crud-api/
+https://www.bezkoder.com/django-angular-mysql/
+https://medium.com/analytics-vidhya/sqlite-database-crud-operations-using-python-3774929eb799
+https://medium.com/gitconnected/using-python-oracledb-1-0-with-sqlalchemy-pandas-django-and-flask-5d84e910cb19
+https://medium.com/@ruchitkharwa/top-10-best-django-packages-to-use-in-your-next-project-c239c2f0c4eb
+https://medium.com/oracledevs/using-the-development-branch-of-sqlalchemy-2-0-with-python-oracledb-d6e89090899c
+https://medium.com/datadriveninvestor/flask-dash-or-streamlit-which-framework-to-use-d3b73d688d64
+https://medium.com/@cjones-oracle ***
+
+https://medium.com/the-research-nest/creating-a-real-time-data-stream-using-apache-kafka-in-python-132e0e5630d3 **********
+https://medium.com/gitconnected/fastapi-fundamentals-getting-faster-with-fastapi-866545b841ca
+https://medium.com/@itssouravshrivas/exploratory-data-analysis-of-hotel-booking-demand-a-case-study-4a27bff589ca ******
+https://medium.com/gitconnected/using-python-oracledb-1-0-with-sqlalchemy-pandas-django-and-flask-5d84e910cb19
+https://medium.com/p/beba787ed7d3 ***
+https://medium.com/gitconnected/django-celery-going-deeper-with-background-tasks-in-python-fa44958cf7cd
+https://medium.com/@estretyakov/the-ultimate-async-setup-fastapi-sqlmodel-alembic-pytest-ae5cdcfed3d4
+https://medium.com/cuddle-ai/async-architecture-with-fastapi-celery-and-rabbitmq-c7d029030377
+https://medium.com/@estretyakov/the-ultimate-async-setup-fastapi-sqlmodel-alembic-pytest-ae5cdcfed3d4
+https://blog.nubecolectiva.com/como-crear-un-crud-con-django-3-1-python-3-9-y-bootstrap-4-6-parte-2/ ***
+https://www.codementor.io/@jadianes/get-started-with-django-building-recommendation-review-app-du107yb1a ***
+
+https://medium.com/dooboolab/prisma-with-python-and-fastapi-33bf25bb20c0
+https://medium.com/the-research-nest/creating-a-real-time-data-stream-using-apache-kafka-in-python-132e0e5630d3  ***
+https://medium.com/@nurettinabaci/handling-multiple-forms-on-the-same-page-in-django-885d4bf28055
+https://medium.com/@gautamankul/tasks-scheduling-in-django-with-redis-and-celery-6d4a1007c273
+https://medium.com/@tech_with_mike/django-docker-optimization-with-multi-stage-technique-with-video-73d96669cd2e
+https://medium.com/@mateuszjasiski/using-minio-with-django-for-local-development-80bda22927
+https://medium.com/better-programming/architecting-django-software-projects-dfe20238bfb2
+https://medium.com/@johschmidt42/setting-up-python-projects-part-iii-56aafde8ae0b
+https://legionscript.medium.com/function-views-django-rest-framework-crash-course-in-2022-ac97b0be2f86
+https://legionscript.medium.com/building-a-social-media-app-with-python-3-django-beginners-tutorial-19-tags-part-2-of-2-76acb235c926
+https://legionscript.medium.com/introduction-to-django-rest-framework-in-2022-9b1d1c99c9b5
+https://github.com/UskoKruM/django-crud-sqlite3
+https://jooble.org/jobs-django
+
+
+https://legionscript.medium.com/django-channels-3-basics-building-a-simple-app-c4aa29978ca4
+Hosting:
+--------
+https://zappycode.com/tutorials/deploy-django-project-on-pythonanywhere
+https://studygyaan.com/django/host-django-website-application-for-free-in-5-minutes
+https://django.how/resources/django-deployment-to-pythonanywhere/
+
+
+Other Links:
+https://medium.com/@jackhuang.wz/generate-music-from-scratch-using-python-53c0fedd0031
+pip install nltk spacy gensim fastai flaml tpot h2o pycaret statsmodels XGBoost
+
+https://medium.com/curiosity-ai/10-hottest-new-apps-to-explore-immediately-september-2022-e7a356d684ac
+
+
+
+
+
+
+
+
+
+
+References :
+https://stackoverflow.com/questions/1534210/use-different-python-version-with-virtualenv
+https://docs.python.org/3/library/venv.html
+https://www.dataquest.io/blog/a-complete-guide-to-python-virtual-environments/
+https://www.roelpeters.be/virtualenv-venv-choose-python-version/
+https://www.freecodecamp.org/news/manage-multiple-python-versions-and-virtual-environments-venv-pyenv-pyvenv-a29fb00c296f/
+
+https://freedjango.com/free-django-hosting/
+https://freedjango.com/cheap-web-hosting-for-beginners/
+
