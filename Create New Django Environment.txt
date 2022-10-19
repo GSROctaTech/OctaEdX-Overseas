@@ -1,14 +1,524 @@
 Start Here:
 ----------
 https://realpython.com/get-started-with-django-1/
+https://www.ahmedbouchefra.com/blog/django-3-tutorial-and-crud-example-with-mysql-and-bootstrap
+https://www.javatpoint.com/django-crud-application
+https://adiramadhan17.medium.com/django-crud-with-forms-and-bootstrap-template-73af33d8f016
+https://adiramadhan17.medium.com/class-based-view-crud-django-with-bootstraptemplate-b241600ee021
+https://www.google.com/search?client=firefox-b-d&q=django+bootstrap+template
+https://www.javatpoint.com/django-and-bootstrap
+https://dev.to/sm0ke/bootstrap-5-free-django-templates-4pi0
+https://themeforest.net/search/django%20bootstrap
+https://www.creative-tim.com/templates/django-free
+https://medium.com/geekculture/save-time-with-this-django-template-bootstrap-admin-7bdbf97813a7
+https://medium.com/@johnthuo/creating-a-hospital-management-system-with-django-f8dff2ffcc98
+https://medium.com/@alex.kirkup/creating-dynamic-labels-for-django-form-fields-9c4d809da651
+https://www.fullstackpython.com/blog/bootstrap-4-django-template.html
+https://adiramadhan17.medium.com/django-crud-with-forms-and-bootstrap-template-73af33d8f016
+https://efficientcoder.net/django-3-tutorial-and-crud-example-with-mysql-and-bootstrap/
+https://www.google.com/search?q=django+mysql+bootstrap+crud+application&sxsrf=ALiCzsax0Q2Pw2alPo0i6exEtCuMAaOMow%3A1666198342883&source=hp&ei=RitQY_6FM-OI4-EPxaS2yAE&iflsig=AJiK0e8AAAAAY1A5Vrruw69HBP8EeMXhLdvVMjLDu5RK&ved=0ahUKEwj-wObC4Oz6AhVjxDgGHUWSDRkQ4dUDCAc&uact=5&oq=django+mysql+bootstrap+crud+application&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECc6BAgAEEM6BwguENQCEEM6BQgAEJECOhEILhCABBCxAxCDARDHARDRAzoKCAAQsQMQgwEQQzoKCC4QsQMQ1AIQQzoLCC4QgAQQsQMQ1AI6CAgAEIAEELEDOgUIABCiBDoHCAAQHhCiBFAAWPGAAWCNjAFoAHAAeACAAb0DiAHVCpIBCTAuMS4yLjEuMZgBAKABAQ&sclient=gws-wiz#scso=_WitQY_DmDbGVjuMPmZWCsAM_38:312
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The below excersise is performed by referring to the below links
+
+https://django-bootstrap-v5.readthedocs.io/en/latest/
+https://www.codeproject.com/Articles/5256610/Django-3-Tutorial-CRUD-Example-with-MySQL-and-Boot
 
 
 import sys
 print(sys.path)
 
-E:\GSReddy\Projects\django\OctaEdX>virtualenv --python="C:\Python\Python310\python.exe" pynewenv
+Run E:\GSReddy\Projects\django\OctaEdX>virtualenv --python="C:\Python\Python310\python.exe" pynewenv
 
-E:\GSReddy\Projects\django\OctaEdX>pynewenv\Scripts\activate.bat
+Run E:\GSReddy\Projects\django\OctaEdX>pynewenv\Scripts\activate.bat
+
+
+Run (pynewenv) E:\GSReddy\Projects\pynewenv\Scripts>pip install django mysqlclient pandas
+
+edit E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX\OctaEdX\settings.py
+
+# Added By G.S.Reddy
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'octaedx',
+        'USER': 'gsreddy',
+        'PASSWORD': 'MySQL@123',
+        'HOST': 'localhost',   
+        'PORT': '3306',
+    }    
+}
+
+Run (pynewenv) E:\GSReddy\Projects\pynewenv\Scripts>cd OctaEdX
+
+Run (pynewenv) E:\GSReddy\Projects\pynewenv\Scripts>python manage.py migrate
+
+Run (pynewenv) E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX>pip install django-widget-tweaks
+
+edit E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX\OctaEdX\settings.py
+
+# Added By G.S.Reddy
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'widget_tweaks'
+]
+
+
+Run (pynewenv) E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX>python manage.py createsuperuser
+
+Username (leave blank to use 'g.s.reddy'): gsreddy
+Email address: gsreddy@octaedx.com
+Password:django123
+Password (again):django123
+Superuser created successfully.
+
+Run (pynewenv) E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX>python manage.py startapp octaedxcrud 
+# application name changed purposefully as it throws the below exception if we run providing "octaedx" as application name here
+# CommandError: 'E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX\octaedx' already exists
+
+Step 7:
+
+edit E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX\OctaEdX\settings.py and modify as below
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'widget_tweaks',
+    'octaedxcrud' # Added by G.S.Reddy as part of Step 7
+]
+
+Edit E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX\octaedxcrud\models.py and append below code in the file
+
+class Contact(models.Model):
+    firstName = models.CharField("First name", max_length=255, blank = True, null = True)
+    lastName = models.CharField("Last name", max_length=255, blank = True, null = True)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20, blank = True, null = True)
+    address = models.TextField(blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
+    createdAt = models.DateTimeField("Created At", auto_now_add=True)
+    
+    def __str__(self):
+        return self.firstName
+
+Run (pynewenv) E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX>python manage.py makemigrations
+
+Migrations for 'octaedxcrud':
+  octaedxcrud\migrations\0001_initial.py
+    - Create model Contact
+
+Run (pynewenv) E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX>python manage.py migrate
+
+Create E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX\octaedxcrud\forms.py and below code into it
+
+from django import forms
+from .models import Contact
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = "__all__"
+
+Edit E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX\octaedxcrud\views.py and append below code in the file
+
+# Commented by G.S.Reddy
+#from django.shortcuts import render
+
+# Create your views here.
+
+# Added by G.S.Reddy
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Contact
+from .forms import ContactForm
+from django.views.generic import ListView, DetailView
+
+class IndexView(ListView):
+    template_name = 'crudapp/index.html'
+    context_object_name = 'contact_list'
+    
+    def get_queryset(self):
+        return Contact.objects.all()
+
+class ContactDetailView(DetailView):
+    model = Contact
+    template_name = 'crudapp/contact-detail.html'
+
+def create(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    form = ContactForm()
+
+    return render(request,'crudapp/create.html',{'form': form})
+
+def edit(request, pk, template_name='crudapp/edit.html'):
+    contact = get_object_or_404(Contact, pk=pk)
+    form = ContactForm(request.POST or None, instance=post)
+    if form.is_valid():
+        form.save()
+        return redirect('index')
+    return render(request, template_name, {'form':form})
+
+def delete(request, pk, template_name='crudapp/confirm_delete.html'):
+    contact = get_object_or_404(Contact, pk=pk)
+    if request.method=='POST':
+        contact.delete()
+        return redirect('index')
+    return render(request, template_name, {'object':contact})
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+edit E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX\OctaEdX\settings.py modify as below
+
+# Added by G.S.Reddy & Revist for 'DIRS': [os.path.join(BASE_DIR, 'templates')], if it throws any errors
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Create the following files inside the "octaedxcrud" folder:
+Run (pynewenv) E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX>cd octaedxcrud
+Run (pynewenv) E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX\octaedxcrud>mkdir templates
+Run (pynewenv) E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX\octaedxcrud>cd templates
+Run (pynewenv) E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX\octaedxcrud\templates>
+
+Here create below files accordingly
+
+base.html :
+-----------
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Django 3 CRUD Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" 
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+{% block content %}
+{% endblock %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+confirm_delete.html :
+---------------------
+
+{% extends 'crudapp/base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row"></div>
+    <br />
+    <div class="row">
+        <div class="col-md-2 col-xs-2 col-sm-2"></div>
+        <div class="col-md-10 col-xs-10 col-sm-10">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="alert alert-warning">
+                        Are you sure you want to delete {{ object }}?
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+edit.html :
+-----------
+
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Contact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+        crossorigin="anonymous">
+    <style type="text/css">
+        <style>
+    </style>
+    </style>
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1 col-xs-1 col-sm-1"></div>
+        <div class="col-md-10 col-xs-10 col-sm-10 ">
+            <br />
+            <h6 style="text-align:center;">
+                <font color="red"> All fields are required</font>
+            </h6>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1 col-xs-1 col-sm-1"></div>
+        <div class="col-md-10 col-xs-10 col-sm-10">
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {% for hidden_field in form.hidden_fields %}
+                {{ hidden_field }}
+                {% endfor %}
+                {% for field in form.visible_fields %}
+                <div class="form-group">
+                    {{ field.label_tag }}
+                    {% render_field field class="form-control" %}
+                    {% if field.help_text %}
+                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                    {% endif %}
+                </div>
+                {% endfor %}
+                <button type="submit" class="btn btn-primary">submit</button>
+            </form>
+            <br>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1"></div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+index.html :
+------------
+{% extends 'crudapp/base.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1 col-xs-1 col-sm-1"></div>
+        <div class="col-md-10 col-xs-10 col-sm-10">
+            <h3 class="round3" style="text-align:center;">Contacts</h3>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-xs-10 col-sm-10"></div>
+        <div class="col-md-2 col-xs-1 col-sm-1">
+            <br />
+            <a href="{% url 'create' %}">
+                <button type="button" class="btn btn-success">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </a>
+        </div>
+    </div>
+    <br />
+    {% for contact in contact_list %}
+    <div class="row">
+        <div class="col-md-1 col-xs-1 col-sm-1"></div>
+        <div class="col-md-7 col-xs-7 col-sm-7">
+            <ul class="list-group">
+
+                <li class="list-group-item ">
+                    <a href="{% url 'detail' contact.pk %}"> {{ contact.firstName }} 
+                    {{contact.lastName}} </a> <span class="badge"></span>
+                </li>
+            </ul>
+            <br>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1">
+            <a href="{% url 'detail' contact.pk %}">
+                <button type="button" class="btn btn-info">
+                    <span class="glyphicon glyphicon-open"></span>
+                </button>
+            </a>
+        </div>
+        <div class="col-md-1">
+            <a href="{% url 'edit' contact.pk %}">
+                <button type="button" class="btn btn-info">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+            </a>
+        </div>
+        <div class="col-md-1">
+            <a href="{% url 'delete' contact.pk %}">
+                <button type="button" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </a>
+        </div>
+        <div class="col-md-1 col-xs-1 col-sm-1"></div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+
+
+create.html :
+-------------
+
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Posts</title>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+        crossorigin="anonymous">
+    <style type="text/css">
+        <style>
+    </style>
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1 col-xs-1 col-sm-1"></div>
+
+            <div class="col-md-10 col-xs-10 col-sm-10 ">
+                <br />
+                <h6 style="text-align:center;">
+                    <font color="red"> All fields are required</font>
+                </h6>
+            </div>
+            <div class="col-md-1 col-xs-1 col-sm-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-xs-1 col-sm-1"></div>
+            <div class="col-md-10 col-xs-10 col-sm-10">
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    {% for hidden_field in form.hidden_fields %}
+                    {{ hidden_field }}
+                    {% endfor %}
+                    {% for field in form.visible_fields %}
+                    <div class="form-group">
+                        {{ field.label_tag }}
+                        {% render_field field class="form-control" %}
+                        {% if field.help_text %}
+                        <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary">post</button>
+                </form>
+                <br>
+            </div>
+            <div class="col-md-1 col-xs-1 col-sm-1"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+contact-detail.html :
+---------------------
+XXXXXXX
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Edit E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX\OctaEdX\urls.py
+
+# Commented By G.S.Reddy
+# from django.contrib import admin
+# from django.urls import path
+
+# urlpatterns = [
+    # path('admin/', admin.site.urls),
+# ]
+
+# Added By G.S.Reddy
+from django.contrib import admin
+from django.urls import path
+from crudapp import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('contacts/', views.IndexView.as_view(), name='index'),
+    path('contacts/<int:pk>/', views.ContactDetailView.as_view(), name='detail'),
+    path('contacts/edit/<int:pk>/', views.edit, name='edit'),
+    path('contacts/create/', views.create, name='create'),
+    path('contacts/delete/<int:pk>/', views.delete, name='delete'),
+]
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+(pynewenv) E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX>python manage.py runserver
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Next:
