@@ -1,0 +1,195 @@
+<a href="#" class="cta" id="button1">Hover me</a>
+<a href="#" class="cta" id="button2">Hover me</a>
+<a href="#" class="cta" id="button3">Hover me</a>
+<a href="#" class="cta" id="button4">
+  <span id="text">Hover me</span>
+  <span id="bg1" class="bg"></span>
+  <span id="bg2" class="bg"></span>
+</a>
+<a href="#" class="cta" id="button5"><span id="rotating-text">Hover me</span></a>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-size: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+.cta {
+  display: block;
+  background-color: cornflowerblue;
+  padding: 1.8%;
+  margin: 7% auto;
+  width: 22%;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  box-shadow: 0 15px 10px -10px rgba(0,0,0,0.4);
+  transition: all .3s ease-in-out;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  letter-spacing: 0.105em;
+}
+
+/* Button 1: Inspired by DevTips - 3d button box shadow (https://codepen.io/devtips/pen/KzozLa) */
+
+#button1:hover {
+  box-shadow: 0 35px 20px -20px rgba(0,0,0,0.2);
+  transform: scale(1.1) translateY(-10px);
+}
+
+#button2:hover {
+  color: cornflowerblue;
+  background-color: white;
+  box-shadow: 0 35px 20px -20px rgba(0,0,0,0.2);
+  transform: scale(1.1) translateY(-10px);
+  border: 1px solid gray;
+}
+
+#button3:hover {
+  animation: shaking-button .5s ease-in-out;
+}
+
+/* Animation for Button 3 */
+@keyframes shaking-button {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(8%);
+  }
+  40% {
+    transform: translateY(-3%);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(8%);
+  }
+  100% {
+    transform: translateY(-3%);
+  }
+}
+
+#button4 {
+  position: relative;
+  background-color: green;
+} 
+
+#button4 #text {
+  position: relative;
+  z-index: 1;
+}
+
+#button4 .bg {
+  position: absolute;
+  background-color: cornflowerblue;
+  width: 50%;
+  top: 0;
+  height: 100%;
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all .3s ease-in-out;
+}
+
+#button4 #bg1 {
+  left: 0;
+  border-radius: 15px 0 0 15px;
+}
+
+#button4 #bg2 {
+  right: 0;
+  border-radius: 0 15px 15px 0;
+}
+
+#button4:hover #bg1 {
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+#button4:hover #bg2 {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+#button5 #rotating-text {
+  display: block;
+  transition: all .2s ease-in-out;
+}
+
+#button5:hover #rotating-text {
+  transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 1366px) {
+  .cta {
+    width: 25%;
+    padding: 2%;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .cta {
+    width: 30%;
+    padding: 2.25%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .cta {
+    width: 35%;
+    padding: 2.5%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .cta {
+    width: 40%;
+    padding: 2.75%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cta {
+    width: 50%;
+    padding: 3%;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .cta {
+    width: 60%;
+    padding: 3.5%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .cta {
+    width: 65%;
+    padding: 3.75%;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .cta {
+    width: 70%;
+    padding: 4%;
+  }
+}
+
+@media only screen and (max-width: 235px) {
+  .cta {
+    width: 80%;
+    padding: 5%;
+  }
+}

@@ -1,0 +1,11 @@
+https://medium.com/@abdulroqeebalaro5/python-flask-build-a-crud-web-app-using-flask-31f3b45040e3
+
+https://medium.com/@codexashish/15-advanced-python-concepts-that-you-must-know-python-advanced-concepts-in-2023-codexashish-d2db622289de
+
+https://medium.com/@fareedkhandev/create-desktop-application-using-flask-framework-ee4386a583e9
+https://medium.com/@fareedkhandev/handling-large-datasets-in-python-42f57ccbbd1b
+https://medium.com/dp6-us-blog/7-advanced-sql-concepts-you-need-to-know-45fa149ba0b0
+https://medium.com/geekculture/sql-study-plan-for-30-days-from-scratch-for-free-cb8df85230f4
+
+https://medium.com/@ruimigueltcarvalho/how-sql-server-executes-sql-statement-ac090ec3844b
+https://python.plainenglish.io/150-5-minute-data-matching-gig-6a5c10ce75d6

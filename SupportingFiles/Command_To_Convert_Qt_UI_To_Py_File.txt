@@ -1,0 +1,8 @@
+e:\GSReddy\PythonProjects>c:\Python\Python39\python.exe -m PyQt5.uic.pyuic -x QtTest.ui -o QtTest.py
+c:\Python\Python39\Scripts>pyuic5.exe -x e:\GSReddy\PythonProjects\QtTest.ui -o e:\GSReddy\PythonProjects\QtTestNewPyQt5.py
+c:\Python\Python39\Scripts>pyuic6.exe -x e:\GSReddy\PythonProjects\QtTest.ui -o e:\GSReddy\PythonProjects\QtTestNewPyQt6.py
+
+
+c:\Python\Python39\python.exe -m PyQt5.uic.pyuic -x E:\GSReddy\PythonProjects\databaseBrowser.ui -o E:\GSReddy\PythonProjects\databaseBrowser.py
+
+c:\Python\Python39\python.exe -m PyQt5.uic.pyuic -x E:\GSReddy\PythonProjects\WholesaleShop\SAEWireFrame.ui -o E:\GSReddy\PythonProjects\WholesaleShop\SAEWireFrame.py

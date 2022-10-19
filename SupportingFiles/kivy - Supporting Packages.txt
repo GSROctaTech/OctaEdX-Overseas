@@ -1,0 +1,40 @@
+Buildozer: generic Python packager
+
+for Android and iOS.
+
+Plyer: platform-independent Python wrapper
+
+for platform-dependent APIs.
+
+Pyjnius: dynamic access to the Java/Android
+
+API from Python.
+
+Pyobjus: dynamic access to the
+
+Objective-C/iOS API from Python.
+
+Python for Android: toolchain
+
+for building and packaging Python applications for Android.
+
+Kivy iOS: toolchain for building and
+
+packaging Kivy applications for iOS.
+
+Audiostream: library for direct access
+
+to the microphone and speaker.
+
+KivEnt: entity-based game engine for Kivy.
+
+Garden: widgets and libraries created and
+
+maintained by users.
+
+Oscpy: a fast and tested python2/3
+
+implementation of OSC.
+
+
+pip install python-for-android

@@ -1,0 +1,121 @@
+.thumb-box {
+  display:block;
+  position:relative;
+  margin-bottom: 25px;
+  z-index:1; 
+  width: 100%;
+  padding: 15px;
+  &:before {
+    content: "";
+    display:block;
+    position:absolute;
+    z-index: 1;
+    background-color:purple;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    transition: opacity linear 0.5s, visibility linear 0.5s;
+  }
+  .icon {
+    width: 75px;
+    height: 75px;
+    display:block;
+    margin:auto;
+    background-color: #eee;
+    position:relative;
+    z-index: 2;
+    border-radius: 50%
+  }
+  .caption {
+    position: absolute;
+    z-index: 2; 
+    width:100%;
+    background-color: purple;
+    padding: 15px;
+    text-align:center;
+    top: 100%; 
+    left:0;
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity linear 0.5s, visibility linear 0.5s;
+  }
+  &:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+  &:hover {
+    z-index: 9;
+    .caption {
+      opacity: 1;
+      visibility: visible;
+      color: #fff;
+    }
+  }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="thumb-box">
+        <div class="icon"></div>
+        <div class="caption"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae illum impedit non vero nihil quod architecto nisi? Ab odio assumenda ratione dolor! Tempore maiores doloribus neque quia deserunt, illum nam.</div></div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumb-box">
+        <div class="icon"></div>
+        <div class="caption"><div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis odit suscipit inventore fuga ullam quisquam illo facilis aperiam, repellendus voluptatem ab sed nisi possimus eveniet? Numquam aut culpa libero sapiente.</div></div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumb-box">
+        <div class="icon"></div>
+        <div class="caption"><div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aliquid iste assumenda, ipsa beatae soluta veritatis pariatur dolorum debitis, expedita sint rerum. Suscipit, blanditiis? Eius eum pariatur unde dicta modi?</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="thumb-box">
+        <div class="icon"></div>
+        <div class="caption"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae illum impedit non vero nihil quod architecto nisi? Ab odio assumenda ratione dolor! Tempore maiores doloribus neque quia deserunt, illum nam.</div></div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumb-box">
+        <div class="icon"></div>
+        <div class="caption"><div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis odit suscipit inventore fuga ullam quisquam illo facilis aperiam, repellendus voluptatem ab sed nisi possimus eveniet? Numquam aut culpa libero sapiente.</div></div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumb-box">
+        <div class="icon"></div>
+        <div class="caption"><div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aliquid iste assumenda, ipsa beatae soluta veritatis pariatur dolorum debitis, expedita sint rerum. Suscipit, blanditiis? Eius eum pariatur unde dicta modi?</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="thumb-box">
+        <div class="icon"></div>
+        <div class="caption"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae illum impedit non vero nihil quod architecto nisi? Ab odio assumenda ratione dolor! Tempore maiores doloribus neque quia deserunt, illum nam.</div></div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumb-box">
+        <div class="icon"></div>
+        <div class="caption"><div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis odit suscipit inventore fuga ullam quisquam illo facilis aperiam, repellendus voluptatem ab sed nisi possimus eveniet? Numquam aut culpa libero sapiente.</div></div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumb-box">
+        <div class="icon"></div>
+        <div class="caption"><div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aliquid iste assumenda, ipsa beatae soluta veritatis pariatur dolorum debitis, expedita sint rerum. Suscipit, blanditiis? Eius eum pariatur unde dicta modi?</div></div>
+      </div>
+    </div>
+  </div>
+  
+</div>

@@ -1,0 +1,137 @@
+* {
+  padding:9px;
+}
+.jbox {
+  display:grid;  
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  grid-template-rows: auto;
+  margin:0 auto;
+  max-width:940px;
+}
+@media (max-width: 940px) {
+  .jbox {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .jbox {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+}
+
+.box {
+  width:100%;
+  height:200px;
+  border-radius:6px;
+  text-align:center;
+  color:white;
+  font-size:2rem;
+  padding:6px; 
+  margin:6px;  
+}
+
+.color-teal {background:teal;}
+.color-purple {background:purple;}
+.color-orange {background:orange;}
+
+/* jHover starts here */
+
+.jFloat {
+  -webkit-transition: 0.3s transform ease-out;
+  transition: 0.3s transform ease-out;
+}
+.jFloat:hover, .jFloat:focus, .jfloat:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+.jBounceIn {
+  -webkit-transition: .6s cubic-bezier(.47,2.02,.31,-0.36);
+  transition: .6s cubic-bezier(.47,2.02,.31,-0.36);
+}
+.jBounceIn:hover, .jbounceIn:focus, .jbounceIn:active {
+  transform: scale(1.1);
+}
+
+.jBounceUp {
+  -webkit-transition:margin .3s ease-out;
+  -moz-transition:margin .3s ease-out;
+  -o-transition:margin .3s ease-out
+}
+.jBounceUp:hover {
+    animation: jBounceUp-frames 1s;
+}
+@keyframes jBounceUp-frames {
+  0%, 20%, 60%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+.jJump {
+  -webkit-transition:margin .3s ease-out;
+  -moz-transition:margin .3s ease-out;
+  -o-transition:margin .3s ease-out
+}
+.jJump:hover {
+    animation: jJump-frames 1s;
+}
+@keyframes jJump-frames {
+  0%, 70%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40%{
+    -webkit-transform: translateY(-18px);
+    transform: translateY(-18px);
+  }
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HTML CSSResult Skip Results Iframe
+<div class="jbox">
+  
+  <div class="box color-teal jFloat">
+    <p>Float</p>
+  </div>
+  <div class="box color-teal jFloat">
+    <p>Float</p>
+  </div>
+
+  <div class="box color-purple jBounceIn">
+    <p>BounceIn</p>
+  </div>
+  <div class="box color-purple jBounceIn">
+    <p>BounceIn</p>
+  </div>
+
+  <div class="box color-orange jBounceUp">
+    <p>BounceUp</p>
+  </div>
+  <div class="box color-orange jBounceUp">
+    <p>BounceUp</p>
+  </div>
+
+   <div class="box color-teal jJump">
+    <p>Jump</p>
+  </div>
+  <div class="box color-teal jJump">
+    <p>Jump</p>
+  </div>
+  
+</div> 

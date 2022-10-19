@@ -1,0 +1,35 @@
+Source Location
+No of Files Selected
+Join Files (Similar/Hybrid)
+Source Type of File(DB, XLS, XLSX, CSV, JSON, XML, PARQUET, Avro, TXT, ZIP, RAR, JPG, PDF...)
+Validate File Type Selection and Schema Type(JSON/XML)
+Fetch/Generate Data Schema
+Create Target Table in Target DB
+Validate File for Data consistency (Columns, Rows, DataTypes, Character Set, Linux/Unix/Win against metadata)
+Get No. of Lines/Records
+Get No. of Columns
+Row Separater/Line Break Character
+Column Separater/Delimiter or Column Fixed Width/Variable 
+Column Names Row Number
+Column DataType(s), Rules(Phone No, E-Mail.. etc)
+Column Length
+Skip No. of Lines/Specify Line No's
+Column Validation(Size, DataType, Lookup, Rule...)
+
+Target (Upstream):
+-----------------------------
+ DB, XLS, XLSX, CSV, JSON, XML, PARQUET, TXT, ZIP, RAR, JPG, PDF...
+Review Data Pane
+
+
+import zipfile
+archive = zipfile.ZipFile('T.zip', 'r')
+df = archive.read('train.csv')
+
+Populate Files Name into List Box
+	Read	
+Read File into DataFrame 
+	
+	File Delimiter
+	Rows to Fetch
+ 

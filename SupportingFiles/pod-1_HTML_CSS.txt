@@ -1,0 +1,125 @@
+.pod-main{
+  width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    position: relative;
+    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
+      -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+ 
+}
+.pod-main{
+  height:200px;
+  width:200px;
+     -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.pod-main .pod-image{
+  -webkit-transition: all .35s linear;
+    transition: all .35s linear;
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+     -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+}
+.pod-border{
+   border-style: solid;
+    border-color: #ddd;
+    border-width: 10px;
+}
+.pod-border img{
+  width: 100%;
+    height: 100%;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  margin:0;
+  
+}
+
+.pod-content{
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    display: block;
+    height: 100%;
+  background: rgba(0,0,0,0);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+ 
+}
+.pod-back{
+      -webkit-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+    -ms-transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+    transform: translate3d(0,0,-220px) rotate3d(1,0,0,90deg);
+  background-color: #e6e6e6;
+    opacity: 1;
+    visibility: hidden;
+    -webkit-transition: all .35s linear;
+    transition: all .35s linear;
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+      position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.pod-info{
+      display: block;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+     -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.pod-main:hover .pod-image{
+  -webkit-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+    -ms-transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg);
+  transform: translate3d(0,280px,0) rotate3d(1,0,0,-90deg); 
+}
+.pod-main:hover .pod-back{
+  -webkit-transform: rotate3d(1,0,0,0);
+    -ms-transform: rotate3d(1,0,0,0);
+    transform: rotate3d(1,0,0,0);
+      opacity: 1;
+    visibility: visible;
+     -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    <div class="pod-main">
+      
+      <div class="pod-image">
+        <div class="pod-border">
+            <img src="http://placehold.jp/250x250.png" alt="image">
+        </div>
+      
+      </div>
+      <div class="pod-content">
+        <div class="pod-back">
+          <div class="pod-info">
+              <h3> Pod Heading Here</h3>
+        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+          </div>
+          
+        </div>
+      
+      </div>
+    </div>
+

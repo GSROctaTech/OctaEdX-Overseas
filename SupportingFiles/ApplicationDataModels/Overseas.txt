@@ -1,0 +1,15 @@
+Overseas - DOCUMENTS
+
+Document_Source_Id 		-	Application_ID/Franchise_ID/
+Document_Source			-	Application/Franchise
+Document_Type			-	Education/Agreement/Certificate
+Document_File_Type		-	JPEG/PNG/PDF/Word/ZIP
+Document_Upload_Date		-	Document Uploaded Date & Time
+Document_Uploaded_By		-	User ID/Application_ID
+Document_Verification_Status	-	Document Verification Status
+Document_Verified_By		-	Document Verified By User_Id
+
+
+Error generating table/sequence for ID generator of table APPLICANT 
+Caused by: Database does not support sequence
+

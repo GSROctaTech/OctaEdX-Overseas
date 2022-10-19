@@ -1,0 +1,23 @@
+https://python-tutorials.in/sqlite-python-creating-tables/
+https://www.geeksforgeeks.org/python-sqlite-create-table/
+
+CREATE TABLE "orders" (
+ "id" INTEGER NOT NULL UNIQUE,
+ "created" TEXT NOT NULL,
+ "customer" INTEGER NOT NULL,
+ "product" INTEGER NOT NULL,
+ "price" NUMERIC NOT NULL,
+ "qty" NUMERIC NOT NULL,
+ "total" NUMERIC,
+ PRIMARY KEY("id")
+)
+CREATE TABLE "customers" (
+ "id" INTEGER NOT NULL,
+ "name" TEXT NOT NULL,
+ PRIMARY KEY("id")
+)
+CREATE TABLE "products" (
+ "id" INTEGER NOT NULL,
+ "name" TEXT NOT NULL,
+ PRIMARY KEY("id")
+)

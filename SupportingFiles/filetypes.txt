@@ -1,0 +1,3 @@
+        # filetypes = (
+        # ('Text files', '*.txt'), ('CSV Files', '*.csv'), ('Excel Files', '*.xls'), ('Excel Files', '*.xlsx'),
+        # ('JSON Files', '*.json'), ('XML Files', '*.xml'), ('All files', '*.*'))

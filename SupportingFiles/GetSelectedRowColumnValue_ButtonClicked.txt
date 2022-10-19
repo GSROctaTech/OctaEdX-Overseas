@@ -1,0 +1,29 @@
+# ntable = QtGui.QTableWidget()
+# ntable.setColumnCount(3)
+# #setCentralWidget(ntable)
+# data1 = ['row1', 'row2', 'row3', 'row4']
+# data2 = ['1', '2.0', '3.00000001', '3.9999999']
+#
+# ntable.setRowCount(4)
+#
+# for index in range(4):
+#     item1 = PyQt5.QtGui.QTableWidgetItem(data1[index])
+#     ntable.setItem(index, 0, item1)
+#     item2 = QtGui.QTableWidgetItem(data2[index])
+#     ntable.setItem(index, 1, item2)
+#     btn_sell = QtGui.QPushButton('Edit')
+#     btn_sell.clicked.connect(lambda: handleButtonClicked())
+#     ntable.setCellWidget(index, 2, btn_sell)
+
+
+def handleButtonClicked():
+    print("Entered handleButtonClicked() - 1")
+    buttonClicked = filestable.sender() # detects the widget that sends the signal
+    objName = buttonClicked.objectName()
+    print("Object Name : " + objName)
+    postitionOfWidget = buttonClicked.pos() # gets the x,y coordinate of this sender
+    index = filestable.indexAt(postitionOfWidget) # item in the qtablewidget with that coordinate
+    if index.isValid():
+        print(index.row(), index.column())
+        showMessage("Index : " + str(index.row()) + " - Column : " + str(index.column()) + " - Value : " +
+                    filestable.item(index.row(), 0).text())

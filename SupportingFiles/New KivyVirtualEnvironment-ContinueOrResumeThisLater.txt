@@ -1,0 +1,12 @@
+https://stackoverflow.com/questions/56903087/showing-error-when-installing-runing-kivy-desginer-no-module-named-kivy-adapter
+
+c:\Python\Python39>virtualenv vKv1100Py3
+created virtual environment CPython3.9.8.final.0-64 in 17931ms
+  creator CPython3Windows(dest=C:\Python\Python39\vKv1100Py3, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\G.S.Reddy\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==22.2.2, setuptools==65.3.0, wheel==0.37.1
+  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+
+E:\GSReddy\PythonProjects\kivy-designer-master>c:\Python\Python39\python.exe -m designer
+

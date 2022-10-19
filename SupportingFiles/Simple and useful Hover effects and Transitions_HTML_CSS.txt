@@ -1,0 +1,247 @@
+.project-section{
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-section-items{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.boxes{
+    height:100px;
+    width: 150px;
+    background-color: coral;
+    margin:5px 10px;
+    cursor: pointer; 
+    transition: all 1s;  /* lets make it smooth */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+}
+
+.change-bgcolor:hover{
+    background-color: crimson;
+    transition: all 1s;
+}
+
+.change-font-color:hover{
+    transition: all 1s;
+    color:blue;
+}
+
+.move-right:hover{
+    background-color: crimson;
+    transition: all .5s;
+    transform : translateX(10px);
+}
+
+.move-left:hover{
+    background-color: crimson;
+    transition: all .5s;
+    transform : translateX(-10px);
+}
+.move-up:hover{
+    background-color: crimson;
+    transition: all .5s;
+    transform : translateY(-10px);
+}
+
+.move-down:hover{
+    background-color: crimson;
+    transition: all .5s;
+    transform : translateY(10px);
+}
+
+.zoom-in:hover{
+    background-color: crimson;
+    transition: all .5s;
+    transform: scale(1.5);
+}
+
+.zoom-out:hover{
+    background-color: crimson;
+    transition: all 1s;
+    transform: scale(.5);
+}
+
+
+.change-radius:hover{
+    background-color: crimson;
+    transition: all 1s;
+    border-radius: 50%;
+}
+
+.expand-left-right:hover{
+    background-color: crimson;
+    transition: all 1s;
+    transform : scaleX(1.5);
+}
+
+.expand-up-down:hover{
+    background-color: crimson;
+    transition: all 1s;
+    transform : scaleY(1.5);
+}
+
+.rotate-clockwise:hover{
+    background-color: crimson;
+    transition: all 1s;
+    -webkit-transform: rotateZ(30deg);
+        -ms-transform: rotateZ(30deg);
+        transform: rotateZ(30deg);
+}
+
+.rotate-anti-clockwise:hover{
+    background-color: crimson;
+    transition: all 1s;
+    -webkit-transform: rotateZ(-30deg);
+        -ms-transform: rotateZ(-30deg);
+        transform: rotateZ(-30deg);
+}
+
+.rotate-360-clockwise:hover{
+    background-color: crimson;
+    transition: all 1s;
+    -webkit-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+}
+
+.rotate-360-anticlockwise:hover{
+    background-color: crimson;
+    transition: all 1s;
+    -webkit-transform: rotateZ(-360deg);
+        -ms-transform: rotateZ(-360deg);
+        transform: rotateZ(-360deg);
+}
+
+.filip-horizontal:hover{
+    background-color: crimson;
+    transition: all 2s;
+    -webkit-transform: rotateY(-360deg);
+        -ms-transform: rotateY(-360deg);
+        transform: rotateY(-360deg);
+}
+
+.filip-horizontal-mirror:hover{
+    background-color: crimson;
+    transition: all 2s;
+    -webkit-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+}
+
+.filip-vertical:hover{
+    background-color: crimson;
+    transition: all 2s;
+    -webkit-transform: rotateX(-360deg);
+        -ms-transform: rotateX(-360deg);
+        transform: rotateX(-360deg);
+}
+
+.filip-vertical-mirror:hover{
+    background-color: crimson;
+    transition: all 2s;
+    -webkit-transform: rotateX(180deg);
+        -ms-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+}
+
+.inset-box-shadow:hover{
+    background-color: crimson;
+    transition: all 1s;
+    box-shadow: inset 0 0 0 20px #2f2f2f;
+    font-size: 25px;
+}
+
+.offset-box-shadow:hover{
+    background-color: crimson;
+    transition: all 1s;
+    box-shadow: 0 0 0 20px #2f2f2f;
+}
+
+.smooth-offset-box-shadow:hover{
+    background-color: crimson;
+    transition: all 1s;
+    box-shadow: 0 0 20px 20px #2f2f2f;
+}
+
+.smooth-inset-box-shadow:hover{
+    background-color: crimson;
+    transition: all 1s;
+    box-shadow: inset 0 0 20px 20px #2f2f2f;
+}
+
+.gradient-color-box{
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to right, lightgreen , darkgreen);
+    transition: all 1s;
+    cursor: pointer;
+    border: 3px solid aqua;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.gradient-color-box:hover{
+    transition: all 1s;
+    background-image: linear-gradient(to right, darkgreen , lightgreen);
+}
+
+.yvanaplaceholder{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.yvana{
+  color: darkgreen;
+  text-decoration: none;
+ }
+
+.name{
+  color: crimson;
+}
+
+<section class="project-section">
+    <div class="boxes change-bgcolor"> Background Color </div>
+    <div class="boxes change-font-color"> Font Color </div>
+    <div class="boxes move-right"> Move Right </div>
+    <div class="boxes move-left"> Move Left </div>
+    <div class="boxes move-up"> Move Up </div>
+    <div class="boxes move-down"> Move Down </div>
+    <div class="boxes zoom-in"> Zoom in </div>
+    <div class="boxes zoom-out"> Zoom out </div>
+    <div class="boxes change-radius"> Change Oval </div>
+    <div class="boxes expand-left-right"> Left-Right</div>
+    <div class="boxes expand-up-down"> Up-Down </div>
+    <div class="boxes rotate-clockwise"> Rotate Clockwise </div>
+    <div class="boxes rotate-anti-clockwise"> Rotate Anticlockwise </div>
+    <div class="boxes rotate-360-clockwise"> 360-clockwise </div>
+    <div class="boxes rotate-360-anticlockwise"> 360-anticlockwise </div>
+    <div class="boxes filip-horizontal"> Horizontal </div>
+    <div class="boxes filip-horizontal-mirror"> Horizontal Mirror </div>
+    <div class="boxes filip-vertical"> Vertical </div>
+    <div class="boxes filip-vertical-mirror"> Vertical Mirror </div>
+    <div class="boxes inset-box-shadow"> Inset Box Shadow </div>
+    <div class="boxes offset-box-shadow"> Offset Box Shadow </div>
+    <div class="boxes smooth-inset-box-shadow"> Smooth Inset Box Shadow </div>
+    <div class="boxes smooth-offset-box-shadow"> Smooth Offset Box Shadow </div>
+    <div class="gradient-color-box"> Gradient Color </div>
+</section>
+
+<div class="yvanaplaceholder">
+  <a class="yvana" href="https://yvana.org" target="_blank"> <span class="name"> @yvana  </span> https://yvana.org</a>
+</div>
