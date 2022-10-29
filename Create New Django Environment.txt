@@ -9,6 +9,7 @@ https://www.google.com/search?client=firefox-b-d&q=django+bootstrap+template
 https://www.javatpoint.com/django-and-bootstrap
 https://dev.to/sm0ke/bootstrap-5-free-django-templates-4pi0
 https://themeforest.net/search/django%20bootstrap
+https://www.youtube.com/watch?v=mGmTWY0u9fg&t=848s
 https://www.creative-tim.com/templates/django-free
 https://medium.com/geekculture/save-time-with-this-django-template-bootstrap-admin-7bdbf97813a7
 https://medium.com/@johnthuo/creating-a-hospital-management-system-with-django-f8dff2ffcc98
@@ -509,7 +510,7 @@ urlpatterns = [
 (pynewenv) E:\GSReddy\Projects\pynewenv\Scripts\OctaEdX>python manage.py runserver
 
 
-
+E:\GSReddy\Projects\SAEOctaBzX\venv\Scripts>activate.bat
 
 
 
