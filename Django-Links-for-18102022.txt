@@ -1,3 +1,4 @@
+
 C:\Python\Projects\django_project\venv\Scripts\dj_HelloWorld\HelloWorld
 
 https://www.doprax.com/tutorial/django-tutorial-for-beginners-part-1/
